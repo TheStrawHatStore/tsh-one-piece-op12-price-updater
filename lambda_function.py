@@ -78,7 +78,7 @@ def lambda_handler(event, context):
   for card in cards:
     cards_price_list[get_title(card)] = get_price(card)
 
-  with open("./tmp/price_updates.jsonl", 'w') as file:
+  with open("/tmp/price_updates.jsonl", 'w') as file:
     file_is_empty = True
     products = shopify.get_products(306379292725, None)
     while True:

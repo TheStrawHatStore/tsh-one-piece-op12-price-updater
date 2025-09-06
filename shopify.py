@@ -26,7 +26,7 @@ class Shopify():
   
   def upload_jsonl(self, url, parameters):
     form_data = { param["name"]: param["value"] for param in parameters }
-    form_data["file"] = open("./tmp/price_updates.jsonl", "r")
+    form_data["file"] = open("/tmp/price_updates.jsonl", "r")
     requests.post(url, files=form_data)
     return form_data["key"]
   
