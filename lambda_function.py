@@ -41,9 +41,9 @@ def get_price(card):
 def find_card_metafiels(product):
   number, rarity = None, None
   for metafield in product["metafields"]["nodes"]:
-    if metafield["key"] == "custom.one_piece_card_number":
+    if metafield["key"] == "custom.number":
       number = metafield["value"]
-    if metafield["key"] == "custom.one_piece_card_rarity":
+    if metafield["key"] == "custom.rarity":
       rarity = metafield["value"]
   return {
     "number": number,
